@@ -1,16 +1,9 @@
-#include <string.h>
-#include <maya/MIOStream.h>
 
 #include <maya/MPxNode.h> 
 
-#include <maya/MString.h> 
 #include <maya/MTypeId.h> 
-#include <maya/MPlug.h>
-
 #include <maya/MFnNumericAttribute.h>
 #include <maya/MVector.h>
-
-#include <maya/MFnPlugin.h>
 #include <maya/MDataBlock.h>
 #include <maya/MDataHandle.h>
 
@@ -45,7 +38,6 @@
 #include <maya/MItDag.h>
 #include <maya/MDistance.h>
 #include <maya/MIntArray.h>
-#include <maya/MIOStream.h>
 #include <maya/MDagPath.h>
 #include <maya/MDrawProcedureBase.h>
 
@@ -53,6 +45,7 @@
 
 #include <maya/MSimple.h>
 #include <maya/MIOStream.h>
+
 
 class ExportComand : public MPxCommand {
 public:
@@ -205,3 +198,5 @@ MStatus uninitializePlugin(MObject _obj)
 		stat.perror("deregisterCommand");
 	return stat;
 }
+
+
