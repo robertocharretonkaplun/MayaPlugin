@@ -1,16 +1,8 @@
 
-#include <maya/MPxNode.h> 
-
-#include <maya/MTypeId.h> 
-#include <maya/MFnNumericAttribute.h>
-#include <maya/MVector.h>
-#include <maya/MDataBlock.h>
-#include <maya/MDataHandle.h>
-
-#include <string.h> 
-#include <sys/types.h>
+#include <maya/MPxNode.h>
 #include <maya/MStatus.h>
 #include <maya/MPxCommand.h>
+
 #include <maya/MString.h>
 #include <maya/MStringArray.h>
 #include <maya/MArgList.h>
@@ -39,17 +31,14 @@
 #include <maya/MDistance.h>
 #include <maya/MIntArray.h>
 #include <maya/MDagPath.h>
-#include <maya/MDrawProcedureBase.h>
 
-#include <math.h>
-
-#include <maya/MSimple.h>
 #include <maya/MIOStream.h>
 
 
 class ExportComand : public MPxCommand {
 public:
-	ExportComand() {};
+	ExportComand() = default;
+	~ExportComand() = default;
 	virtual MStatus	doIt(const MArgList&);
 	static void* creator();
 	void extractVertices();
